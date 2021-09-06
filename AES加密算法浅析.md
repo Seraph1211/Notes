@@ -18,13 +18,13 @@ AES是分组加密的，也就是把明文分成若干组，每组长度相等�
 
 每一轮（最后一轮除外）加密均包含4个步骤：字节替代、行移位、列混淆、轮密钥加。最后一轮加密循环省略列混淆这一步骤。
 
-![image-20210508155947708](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508155947708.png)
+![image-20210508155947708](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508155947708.png)
 
 ### 2.1  字节替代（SubBytes）
 
 字节替代实际上就是一个查表操作：通过查表的方式把状态矩阵中的每一个字节映射成新的字节。
 
-![image-20210508152821137](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508152821137.png)节的高4位作为行值，低4位作为列值，然后取出S盒或逆S盒中对应的元素作为输出。
+![image-20210508152821137](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508152821137.png)节的高4位作为行值，低4位作为列值，然后取出S盒或逆S盒中对应的元素作为输出。
 
 ### 2.2  行移位（ShiftRows）
 
@@ -32,19 +32,19 @@ AES是分组加密的，也就是把明文分成若干组，每组长度相等�
 
 比如当密钥长度为128比特时，状态矩阵第0行左移0字节，第1行左移1字节，第2行左移2字节，第3行左移3字节。如下图所示：
 
-![image-20210508152753291](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508152753291.png)
+![image-20210508152753291](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508152753291.png)
 
 ### 2.3  列混淆（MixColumns）
 
 列混淆是通过矩阵的乘法来实现的，经行移位后的状态矩阵与固定的矩阵相乘，得到混淆后的状态矩阵。
 
-![image-20210508154413261](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508154413261.png)
+![image-20210508154413261](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508154413261.png)
 
 ### 2.4  轮密钥加（AddRoundKey）
 
 轮密钥加是将矩阵中的每一个字节都与该轮次的密钥逐字做异或运算（XOR），每一轮次的密钥都由密钥生成方案产生。
 
-![image-20210508154734544](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508154734544.png)
+![image-20210508154734544](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508154734544.png)
 
 
 
@@ -54,7 +54,7 @@ AES是分组加密的，也就是把明文分成若干组，每组长度相等�
 
 ECB模式是最早采用、最简单的模式，它将加密的数据分成若干组，每组的大小跟密钥长度相同，然后每组明文都用相同的密钥进行加密。
 
-![image-20210508161534029](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508161534029.png)
+![image-20210508161534029](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508161534029.png)
 
 #### ECB模式的优点：
 
@@ -71,7 +71,7 @@ ECB模式由于每块数据的加密是独立的因此加密和解密都可以�
 
 下面的例子显示了ECB在密文中显示平文的模式的程度：该图像的一个位图版本（左图）通过ECB模式可能会被加密成中图，而非ECB模式通常会将其加密成右图：
 
-![image-20210508162623025](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508162623025.png)
+![image-20210508162623025](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508162623025.png)
 
 
 
@@ -79,7 +79,7 @@ ECB模式由于每块数据的加密是独立的因此加密和解密都可以�
 
 CBC模式对于每个待加密的密码块在加密前会先与前一个密码块的密文异或然后再用加密器加密。第一个明文块与一个叫初始化向量的数据块异或。
 
-![image-20210508163307248](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508163307248.png)
+![image-20210508163307248](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508163307248.png)
 
 #### CBC模式的优点：
 
@@ -109,7 +109,7 @@ CFB的加密工作分为两部分：
 1. 将一前段加密得到的密文再加密.
 2. 将第1步加密得到的数据与当前段的明文异或。
 
-![CFB模式](C:\Users\Seraph\Pictures\CFB模式.jpg)
+![CFB模式](D:\MyGitHouse\Notes\AES加密算法浅析.assets\CFB模式.jpg)
 
 #### CFB模式的优点：
 
@@ -129,7 +129,7 @@ CFB的加密工作分为两部分：
 
 OFB模式不是通过密码算法对明文直接加密的，而是通过将“明文分组”和“密码算法的输出”进行XOR运算来产生“密文分组”的。
 
-![OFB模式](C:\Users\Seraph\Pictures\OFB模式.jpg)
+![OFB模式](D:\MyGitHouse\Notes\AES加密算法浅析.assets\OFB模式.jpg)
 
 #### CFB模式的优点：
 
@@ -149,7 +149,7 @@ OFB模式不是通过密码算法对明文直接加密的，而是通过将“�
 
 CTR模式中，每个分组对应一个逐次累加的计数器，并通过对计数器进行加密来生成密钥流。也就是说，最终的密文分组是通过将计数器加密而得到的比特序列，与明文分组进行XOR运算而得到的。
 
-![image-20210508172728796](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210508172728796.png)
+![image-20210508172728796](D:\MyGitHouse\Notes\AES加密算法浅析.assets\image-20210508172728796.png)
 
 #### CTR模式优点：
 

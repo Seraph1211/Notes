@@ -550,7 +550,7 @@ column_name3 data_type(size),
 
 某列不能存储null值。强制约束某字段始终包含值，即如果不向该字段添加值，就无法插入新纪录。
 
-![image-20210529162254970](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210529162254970.png)
+![image-20210529162254970](D:\MyGitHouse\Notes\SQL语句学习.assets\image-20210529162254970.png)
 
 ### 2.21.2  UNIQUE
 

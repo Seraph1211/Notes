@@ -12,7 +12,7 @@ Kotlin不支持三目运算符，且位运算符与Java也略有区别。除此�
 
 单目前缀运算符有：+, -, !
 
-![image-20210418103759629](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418103759629.png)
+![image-20210418103759629](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418103759629.png)
 
 ``` kotlin
 var a = 20
@@ -29,7 +29,7 @@ var a = 20
 
 自减：--
 
-![image-20210418104354652](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418104354652.png)
+![image-20210418104354652](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418104354652.png)
 
 * 当++、--放在变量前时（++a, --a）：
   1. 先对变量调用inc()、dec()方法，并将方法返回值赋给变量。
@@ -41,9 +41,9 @@ var a = 20
 
 #### 3.1.3 双目算数运算符
 
-![image-20210418105028478](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418105028478.png)
+![image-20210418105028478](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418105028478.png)
 
-![image-20210418105038556](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418105038556.png)
+![image-20210418105038556](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418105038556.png)
 
 #### 3.1.4 in 和 !in 运算符
 
@@ -52,7 +52,7 @@ in 和 !in是Kotlin中的一个语法糖。
 * a in b ：判断a是否包含于b
 * a !in b ：判断a是否不包含于b
 
-![image-20210418105204905](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418105204905.png)
+![image-20210418105204905](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418105204905.png)
 
 ~~~ kotlin
 var strP = "hello world"
@@ -65,13 +65,13 @@ println(a !in array)  //输出：true
 
 #### 3.1.5 索引访问运算符
 
-![image-20210418114108555](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418114108555.png)
+![image-20210418114108555](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418114108555.png)
 
 Kotlin中的String和ArrayList等都可以通过索引访问运算符获取指定索引处的元素，这也是Kotlin提供的语法糖。
 
 #### 3.1.6 调用运算符
 
-![image-20210418114351554](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418114351554.png)
+![image-20210418114351554](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418114351554.png)
 
 ``` kotlin
 val s = "java.lang.String"
@@ -84,11 +84,11 @@ println(mtd("java"))  //使用调用运算符，输出4
 
 #### 3.1.7 广义赋值运算符
 
-![image-20210418114911276](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418114911276.png)
+![image-20210418114911276](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418114911276.png)
 
 #### 3.1.8 相等与不等运算符
 
-![image-20210418115244477](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418115244477.png)
+![image-20210418115244477](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418115244477.png)
 
 由上表可知，Kotlin中的"=="与Java不同，它不再是比较两个变量是否引用在同一个对象上（即比较的不再是地址），而是与Java中的equals()基本等义（只不过"=="空指针安全）。
 
@@ -96,7 +96,7 @@ println(mtd("java"))  //使用调用运算符，输出4
 
 #### 3.1.9 比较运算符
 
-![image-20210418115816482](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418115816482.png)
+![image-20210418115816482](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418115816482.png)
 
 由上表可知，比较运算符是由compareTo()方法实现的，因此原来Java中支持使用compareTo()方法比较大小的对象，都可以用比较运算符进行比较。
 
@@ -127,7 +127,7 @@ Kotlin支持的位运算符同样有如下7个：
 
 **Kotlin的运算符只对 Int 和 Long 两种数据类型起作用。**
 
-![image-20210418121018240](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210418121018240.png)
+![image-20210418121018240](D:\MyGitHouse\Notes\Kotlin学习笔记3 ：运算符和表达式.assets\image-20210418121018240.png)
 
 在进行移位运算时，只要被移位的二进制码没有发生有效位的数字丢失，左移n位就相当于乘以2的n次方，右移n位就相当于除以2的n次方。
 

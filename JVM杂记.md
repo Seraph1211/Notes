@@ -18,7 +18,7 @@ JVM可以理解的代码叫做**字节码**（即扩展名为.class的文件）�
 
 根据JVM规范，类文件由单个ClassFile结构组成：
 
-![image-20210817232238393](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210817232238393.png)
+![image-20210817232238393](D:\MyGitHouse\Notes\JVM杂记.assets\image-20210817232238393.png)
 
 ![img](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%E7%B1%BB%E6%96%87%E4%BB%B6%E5%AD%97%E8%8A%82%E7%A0%81%E7%BB%93%E6%9E%84%E7%BB%84%E7%BB%87%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 
@@ -66,7 +66,7 @@ JVM可以理解的代码叫做**字节码**（即扩展名为.class的文件）�
 
 用于描述接口或类中声明的变量，包括类变量和实例变量，不包括方法内声明的局部变量
 
-![image-20210817234022147](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210817234022147.png)
+![image-20210817234022147](D:\MyGitHouse\Notes\JVM杂记.assets\image-20210817234022147.png)
 
 
 
@@ -74,7 +74,7 @@ JVM可以理解的代码叫做**字节码**（即扩展名为.class的文件）�
 
 Class文件中对方法的描述和对字段的描述几乎一致，包含访问标志、名称索引、描述符索引、属性表集合等内容
 
-![image-20210817234056071](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210817234056071.png)
+![image-20210817234056071](D:\MyGitHouse\Notes\JVM杂记.assets\image-20210817234056071.png)
 
 
 

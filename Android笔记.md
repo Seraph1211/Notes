@@ -21,7 +21,7 @@ Activity之间可以通过Intent进行通信。
 6. **onDestory()**：Activity被销毁之前调用，可以在此做一些回收工作和资源的释放。
 7. **onRestart()**：Activity从停止状态变为运行状态时调用（不可见到可见），表示Activity正在重新启动。
 
-![Activity的生命周期](D:\桌面\Activity的生命周期.png)
+![Activity的生命周期](D:\MyGitHouse\Notes\Android笔记.assets\Activity的生命周期.png)
 
 
 

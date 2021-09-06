@@ -4,7 +4,7 @@ Kotlin为数组增加了一个Array类，为元素是基本类型的数组增加
 
 Kotlin的集合体系抛弃了Java中的Queue集合，但增加了``可变集合``和``不可变集合``的概念。Kotlin的集合体系由三种集合组成：List、Set、Map
 
-![image-20210422172932678](C:\Users\Seraph\AppData\Roaming\Typora\typora-user-images\image-20210422172932678.png)
+![image-20210422172932678](D:\MyGitHouse\Notes\Kotlin学习笔记5 ：数组和集合.assets\image-20210422172932678.png)
 
 上述三种集合性质与Java类似。
 
